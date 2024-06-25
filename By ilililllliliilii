@@ -1,4 +1,4 @@
-wait("0.5")
+wait("0.30")
 --[[
 ╭━╮╱╭╮╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╭╮            |
 ┃┃╰╮┃┃╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱┃┃            |
@@ -11958,7 +11958,7 @@ until glueloop == false
 					 game.CoreGui.PurchasePrompt.Enabled = true
 				 end)
 				 
-								 cmd.add({"nameless"}, {"nameless", "Makes your hats visible but not your name or your body"}, function()
+								 cmd.add({"super"}, {"super", "Makes your hats visible but not your name or your body"}, function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/nameless"))()
  end)
  
