@@ -21,8 +21,8 @@
  local Notify = Notification.Notify;
 
  Notify({
-		 Description = "https://discord.gg/pnPVKKdpfd";
-		 Title = "Join the Discord Server!";
+		 Description = "ilililllliliilii";
+		 Title = "Add My Discord!";
 		 Duration = 20;
 		 
 });
@@ -9678,8 +9678,8 @@ getChar().HumanoidRootPart.CFrame = target.Character.Humanoid.RootPart.CFrame
 	 wait();
 	 
 	 Notify({
-	 Description = "discord.gg/mW442YxE4j";
-	 Title = "Nameless Admin";
+	 Description = "ilililllliliilii";
+	 Title = "Discord";
 	 Duration = 15;
 	 
 	 });
@@ -14638,7 +14638,7 @@ end)
  if PluginsErrored == 0 then
 	 Notify({
 			 Description = "Loaded " .. PluginsLoaded .. " plugins";
-			 Title = "Nameless Admin";
+			 Title = "Super Admin";
 			 Duration = 3;
 			 
 			 });
