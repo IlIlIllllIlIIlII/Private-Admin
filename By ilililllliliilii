@@ -34,23 +34,23 @@ wait("0.5")
  
  -- Creates folder & files for Prefix & Plugins
  if FileSupport then
- if not isfolder('Nameless-Admin') then
- makefolder('Nameless-Admin')
+ if not isfolder('Super-Admin') then
+ makefolder('Super-Admin')
  end
  
- if not isfolder('Nameless-Admin/Plugins') then
-	 makefolder('Nameless-Admin/Plugins')
+ if not isfolder('Super-Admin/Plugins') then
+	 makefolder('Super-Admin/Plugins')
  end
  
- if not isfile("Nameless-Admin/Prefix.txt") then
- writefile("Nameless-Admin/Prefix.txt", ';')
+ if not isfile("Super-Admin/Prefix.txt") then
+ writefile("Super-Admin/Prefix.txt", ';')
  else
  end
  end
  
  -- [[ PREFIX AND OTHER STUFF. ]] -- 
  local opt = {
-	 prefix = readfile("Nameless-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
+	 prefix = readfile("Super-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
 	 tupleSeparator = ',',	-- ;ff me,others,all | ;ff me/others/all
 	 ui = {					-- never did anything with this
 		 
@@ -797,7 +797,7 @@ wait("0.5")
 		 
 		 });
 	 else
- writefile("Nameless-Admin\\Prefix.txt", PrefixChange)
+ writefile("Super-Admin\\Prefix.txt", PrefixChange)
  opt.prefix = PrefixChange
  Notify({
  Description = "Prefix saved to '" .. PrefixChange .. "'";
@@ -14619,8 +14619,8 @@ end)
 
  if CustomFunctionSupport then
  local success, result = pcall(function()
-			 for i,v in pairs(listfiles("Nameless-Admin/Plugins")) do
-			 loadstring(readfile(listfiles("Nameless-Admin/Plugins")[i]))();
+			 for i,v in pairs(listfiles("Super-Admin/Plugins")) do
+			 loadstring(readfile(listfiles("Super-Admin/Plugins")[i]))();
  PluginsLoaded = PluginsLoaded + 1
  end
  end)
