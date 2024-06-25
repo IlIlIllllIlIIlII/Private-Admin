@@ -15120,7 +15120,7 @@ end
  ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
  ScreenGui.ResetOnSpawn = true
  
- TextClickButton.Name = "NamelessAdminButton"
+ TextClickButton.Name = "SuperAdminButton"
  TextClickButton.Parent = ScreenGui
  TextClickButton.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
  TextClickButton.BackgroundTransparency = 1.000
