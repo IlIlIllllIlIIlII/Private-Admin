@@ -5920,7 +5920,7 @@ end
 			 end
 	 end)
  
- cmd.add({"infiniteyield", "iy"}, {"infiniteyield", "infinite yield admin"}, function()
+ cmd.add({"testing"}, {"testing", "Thanks for testing"}, function()
 	 loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()"))()
  end)
 
