@@ -5920,6 +5920,10 @@ end
 			 end
 	 end)
  
+ cmd.add({"infiniteyield", "iy"}, {"infiniteyield", "infinite yield admin"}, function()
+	 loadstring(game:HttpGet("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()"))()
+ end)
+
  cmd.add({"2016"}, {"2016", "2016 CORE GUI"}, function()
 	-- [[ PLAYERBOARD IS BUGGED BUT WILL TRY TO FIX. ]] --
  loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/2016MODE"))()
