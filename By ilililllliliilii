@@ -10410,7 +10410,7 @@ until glueloop == false
 				 
  end)
  
- cmd.add({"cbring", "clientbring"}, {"clientbring <player> (cbring)", "Brings the player on your client"}, function(...)
+ cmd.add({"autohit", "automatichit"}, {"automatichit <player> (autohit)", "NEEDS A DAMAGE TOOL IN HAND"}, function(...)
 	 Username = (...)
  
 	 if connections["noclip"] then lib.disconnect("noclip") return end
@@ -10422,9 +10422,6 @@ until glueloop == false
 			 end
 		 end
 	 end))
-
-	  cmd.add({"autohit", "automatichit"}, {"automatichit <player> (autohit)", "NEEDS A DAMAGE TOOL IN HAND"}, function(...)
-	 Username = (...)
 	 
 	 if Username == "all" or Username == "others" then
 		 bringc = game:GetService("RunService").RenderStepped:Connect(function()
@@ -10447,9 +10444,6 @@ until glueloop == false
  end)
  
  cmd.add({"unautohit", "unautomatichit"}, {"unautomatichit (unautohit)", "Disable Automatic Hit Command"}, function()
-	 bringc:Disconnect()
-
- cmd.add({"uncbring", "unclientbring"}, {"unclientbring (uncbring)", "Disable Client bring command"}, function()
 	 bringc:Disconnect()
 	 if connections["noclip"] then lib.disconnect("noclip") return end
  end)
