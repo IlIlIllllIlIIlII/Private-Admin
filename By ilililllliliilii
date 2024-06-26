@@ -10312,7 +10312,7 @@ until glueloop == false
 	glueloop = false
  end)
  
- cmd.add({"smooch", "kiss"}, {"smooch <player> (kiss)", "Sneak Attack A Player With A Kiss"}, function(...)
+ cmd.add({"sneakattackkiss", "smooch", "kiss", "spook", "scare"}, {"smooch <player> (kiss)", "Sneak Attack A Player With A Kiss"}, function(...)
  Username = (...)
  Target = getPlr(Username)
  
