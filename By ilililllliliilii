@@ -623,7 +623,7 @@
 	 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/executor"))()
  end)
  
- cmd.add({"scripthub"}, {"scripthub", "Thanks to scriptblox api"}, function()
+ cmd.add({"scripthub", "search"}, {"scripthub", "Thanks to scriptblox api"}, function()
 	 loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/ScriptHub"))()
  end)
  
@@ -10411,7 +10411,7 @@ until glueloop == false
 				 
  end)
  
- cmd.add({"autohit", "automatichit"}, {"automatichit <player> (autohit)", "NEEDS A DAMAGE TOOL IN HAND"}, function(...)
+ cmd.add({"cbring", "clientbring", "automatichit", "autohit"}, {"clientbring <player> (cbring)", "Brings the player on your client"}, function(...)
 	 Username = (...)
  
 	 if connections["noclip"] then lib.disconnect("noclip") return end
@@ -10444,7 +10444,7 @@ until glueloop == false
 	 end
  end)
  
- cmd.add({"unautohit", "unautomatichit"}, {"unautomatichit (unautohit)", "Disable Automatic Hit Command"}, function()
+ cmd.add({"uncbring", "unclientbring", "disableautomatichit", "disableautohit"}, {"unclientbring (uncbring)", "Disable Client bring command"}, function()
 	 bringc:Disconnect()
 	 if connections["noclip"] then lib.disconnect("noclip") return end
  end)
@@ -14137,7 +14137,7 @@ end)
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/mgamingpro/HomebrewAdmin/master/Main'),true))()
 	 end)
  
-     cmd.add({"infiniteyield", "iy"}, {"infinite yield {command} (iy)", "Executes infinite yield admin"}, function()
+     cmd.add({"infiniteyield", "iy"}, {"infiniteyield {command} (iy)", "Executes infinite yield admin"}, function()
 	 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
      end)
 
