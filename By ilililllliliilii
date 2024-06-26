@@ -10312,7 +10312,7 @@ until glueloop == false
 	glueloop = false
  end)
  
- cmd.add({"spook", "scare"}, {"spook <player> (scare)", "Teleports next to a player for a few seconds"}, function(...)
+ cmd.add({"smooch", "kiss"}, {"smooch <player> (kiss)", "Sneak Attack A Player With A Kiss"}, function(...)
  Username = (...)
  Target = getPlr(Username)
  
@@ -10329,9 +10329,9 @@ until glueloop == false
 		 
  end)
  
- loopspook = false
- cmd.add({"loopspook", "loopscare"}, {"loopspook <player> (loopscare)", "Teleports next to a player for a few seconds and then again and again"}, function(...)
-	 loopspook = true
+ loopsmooch = false
+ cmd.add({"loopsmooch", "loopkiss"}, {"loopsmooch <player> (loopkiss)", "Sneak Attack A Player With A Kiss and then again and again"}, function(...)
+	 loopsmooch = true
  repeat wait()
 	 Username = (...)
 	 Target = getPlr(Username)
@@ -10347,11 +10347,11 @@ until glueloop == false
 							 LocalPlayer.Character.HumanoidRootPart.CFrame = oldCF
 					 end
 					 wait(0.3)
- until loopspook == false
+ until loopsmooch == false
  end)
  
- cmd.add({"unloopspook", "unloopscare"}, {"unloopspook <player> (unloopscare)", "Stops the loopspook command"}, function()
-	 loopspook = false
+ cmd.add({"unloopsmooch", "unloopkiss"}, {"unloopsmooch <player> (unloopkiss)", "Stops the loopsmooch command"}, function()
+	 loopsmooch = false
  end)
  
  cmd.add({"unbang", "unfuck"}, {"unbang", "Unbangs the player"}, function()
