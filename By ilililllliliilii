@@ -1,4 +1,3 @@
-wait("5.0")
 --[[
 ╭━╮╱╭╮╱╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╭╮            |
 ┃┃╰╮┃┃╱╱╱╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱┃╭━╮┃╱┃┃            |
@@ -34,23 +33,23 @@ wait("5.0")
  
  -- Creates folder & files for Prefix & Plugins
  if FileSupport then
- if not isfolder('Super-Admin') then
- makefolder('Super-Admin')
+ if not isfolder('Nameless-Admin') then
+ makefolder('Nameless-Admin')
  end
  
- if not isfolder('Super-Admin/Plugins') then
-	 makefolder('Super-Admin/Plugins')
+ if not isfolder('Nameless-Admin/Plugins') then
+	 makefolder('Nameless-Admin/Plugins')
  end
  
- if not isfile("Super-Admin/Prefix.txt") then
- writefile("Super-Admin/Prefix.txt", ';')
+ if not isfile("Nameless-Admin/Prefix.txt") then
+ writefile("Nameless-Admin/Prefix.txt", ';')
  else
  end
  end
  
  -- [[ PREFIX AND OTHER STUFF. ]] -- 
  local opt = {
-	 prefix = readfile("Super-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
+	 prefix = readfile("Nameless-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
 	 tupleSeparator = ',',	-- ;ff me,others,all | ;ff me/others/all
 	 ui = {					-- never did anything with this
 		 
@@ -797,7 +796,7 @@ wait("5.0")
 		 
 		 });
 	 else
- writefile("Super-Admin\\Prefix.txt", PrefixChange)
+ writefile("Nameless-Admin\\Prefix.txt", PrefixChange)
  opt.prefix = PrefixChange
  Notify({
  Description = "Prefix saved to '" .. PrefixChange .. "'";
@@ -4395,7 +4394,7 @@ print(Time)
  
 		 cmd.add({"harked", "comet"}, {"harked (comet)", "Executes Comet which is like harked"}, function()
 			 Notify({
- Description = "Join the discord to see supported games! Use the discord command to get the invite";
+ Description = "";
  Title = "Super Admin";
  Duration = 7;
  
@@ -9675,12 +9674,12 @@ getChar().HumanoidRootPart.CFrame = target.Character.Humanoid.RootPart.CFrame
  loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/hat%20resize'))()
  end)
  
- cmd.add({"discord"}, {"discord", "Owner"}, function()
+ cmd.add({"discord"}, {"discord", "discord server link"}, function()
 	 wait();
 	 
 	 Notify({
-	 Description = "ilililllliliilii";
-	 Title = "Discord";
+	 Description = "discord.gg/mW442YxE4j";
+	 Title = "Super Admin";
 	 Duration = 15;
 	 
 	 });
@@ -14619,8 +14618,8 @@ end)
 
  if CustomFunctionSupport then
  local success, result = pcall(function()
-			 for i,v in pairs(listfiles("Super-Admin/Plugins")) do
-			 loadstring(readfile(listfiles("Super-Admin/Plugins")[i]))();
+			 for i,v in pairs(listfiles("Nameless-Admin/Plugins")) do
+			 loadstring(readfile(listfiles("Nameless-Admin/Plugins")[i]))();
  PluginsLoaded = PluginsLoaded + 1
  end
  end)
@@ -15120,7 +15119,7 @@ end
  ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
  ScreenGui.ResetOnSpawn = true
  
- TextClickButton.Name = "SuperAdminButton"
+ TextClickButton.Name = "NamelessAdminButton"
  TextClickButton.Parent = ScreenGui
  TextClickButton.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
  TextClickButton.BackgroundTransparency = 1.000
@@ -15145,7 +15144,7 @@ end
 	 textclickbutton:TweenSize(UDim2.new(0, 32, 0, 33), "Out", "Quint",1,true)
 	 textclickbutton:TweenPosition(UDim2.new(0.48909232, 0, 0, 0), "Out", "Quint",1,true)
 	 wait(0.4)
-	 textclickbutton.Text = "SA"
+	 textclickbutton.Text = "NA"
 	 textclickbutton.Active = true
  gui.draggable(textclickbutton)
  end
