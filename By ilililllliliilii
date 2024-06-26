@@ -9669,7 +9669,7 @@ getChar().HumanoidRootPart.CFrame = target.Character.Humanoid.RootPart.CFrame
 	 wait();
 	 
 	 Notify({
-	 Description = "discord.gg/mW442YxE4j";
+	 Description = "ilililllliliilii";
 	 Title = "Private Admin";
 	 Duration = 15;
 	 
@@ -9689,7 +9689,7 @@ getChar().HumanoidRootPart.CFrame = target.Character.Humanoid.RootPart.CFrame
 			 })
 		 })
 	 end
-	 setclipboard("discord.gg/mW442YxE4j")
+	 setclipboard("ilililllliliilii")
 	 end)
  
  cmd.add({"exit"}, {"exit", "Close down roblox"}, function()
@@ -10364,7 +10364,7 @@ until glueloop == false
  end
  end)
  
- cmd.add({"unairwalk", "unaw"}, {"unairwalk (unaw)", "Stops the airwalk command"}, function()
+ cmd.add({"unairwalk", "unaw", "killjesus"}, {"unairwalk (unaw)", "Stops the airwalk command"}, function()
 	 for i, v in pairs(workspace:GetChildren()) do
 		 if tostring(v) == "Airwalk" then
 			 v:Destroy()
@@ -10381,7 +10381,7 @@ until glueloop == false
  
  end)
  
- cmd.add({"airwalk", "aw"}, {"airwalk (aw)", "Press space to go up, unairwalk to stop"}, function()
+ cmd.add({"airwalk", "aw", "jesus"}, {"airwalk (aw)", "Press space to go up, unairwalk to stop"}, function()
  wait();
  
  Notify({
