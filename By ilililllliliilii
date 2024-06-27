@@ -24,23 +24,23 @@
  
  -- Creates folder & files for Prefix & Plugins
  if FileSupport then
- if not isfolder('Private-Admin') then
- makefolder('Private-Admin')
+ if not isfolder('Nameless-Admin') then
+ makefolder('Nameless-Admin')
  end
  
- if not isfolder('Private-Admin/Plugins') then
-	 makefolder('Private-Admin/Plugins')
+ if not isfolder('Nameless-Admin/Plugins') then
+	 makefolder('Nameless-Admin/Plugins')
  end
  
- if not isfile("Private-Admin/Prefix.txt") then
- writefile("Private-Admin/Prefix.txt", ';')
+ if not isfile("Nameless-Admin/Prefix.txt") then
+ writefile("Nameless-Admin/Prefix.txt", ';')
  else
  end
  end
  
  -- [[ PREFIX AND OTHER STUFF. ]] -- 
  local opt = {
-	 prefix = readfile("Private-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
+	 prefix = readfile("Nameless-Admin/Prefix.txt", ';'), -- If player's executor has the custom file function support it reads the prefix file to get prefix
 	 tupleSeparator = ',',	-- ;ff me,others,all | ;ff me/others/all
 	 ui = {					-- never did anything with this
 		 
@@ -14555,8 +14555,8 @@ end)
 
  if CustomFunctionSupport then
  local success, result = pcall(function()
-			 for i,v in pairs(listfiles("Private-Admin/Plugins")) do
-			 loadstring(readfile(listfiles("Private-Admin/Plugins")[i]))();
+			 for i,v in pairs(listfiles("Nameless-Admin/Plugins")) do
+			 loadstring(readfile(listfiles("Nameless-Admin/Plugins")[i]))();
  PluginsLoaded = PluginsLoaded + 1
  end
  end)
