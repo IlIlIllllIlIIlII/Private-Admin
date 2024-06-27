@@ -14137,35 +14137,6 @@ end)
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/mgamingpro/HomebrewAdmin/master/Main'),true))()
 	 end)
  
-		 cmd.add({"iy", "i"}, {"iy {command} (i)", "Executes infinite yield scripts"}, function(...)
-			-- [[ thanks to homebrew devs for this ]] --
-			 if IYLOADED == false then
-				 local function copytable(tbl) local copy = {} for i,v in pairs(tbl) do copy[i] = v end return copy end
-				 local sandbox_env = copytable(getfenv())
-				 setmetatable(sandbox_env, {
-				 __index = function(self, i)
-					 if rawget(sandbox_env, i) then
-						 return rawget(sandbox_env, i)
-					 elseif getfenv()[i] then
-						 return getfenv()[i]
-					 end
-				 end
-				 })
-				 sandbox_env.game = nil
-				 iy, _ = game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"):gsub("local Main", "Main"):gsub("Players.LocalPlayer.Chatted","Funny = Players.LocalPlayer.Chatted"):gsub("local lastMessage","notify = _G.notify\nlocal lastMessage")
-				 setfenv(loadstring(iy),sandbox_env)()
-				 iy_cmds_table = sandbox_env.CMDs
-				 iy_gui = sandbox_env.Main
-				 iy_chathandler = sandbox_env.Funny
-				 execCmd = sandbox_env.execCmd
-				 iy_gui:Destroy()
-				 pcall(function()
-					 iy_chathandler:Disconnect()
-				 end)
-				 IYLOADED = true
-			 end
-			 execCmd((...))
-			 end)
  
      cmd.add({"infiniteyield", "iy"}, {"infiniteyield {command} (iy)", "Executes infinite yield admin"}, function()
 	 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
