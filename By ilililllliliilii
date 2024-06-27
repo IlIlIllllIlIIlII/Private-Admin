@@ -2473,6 +2473,10 @@ print(Time)
  anniblockspam = true
  end)
  
+ cmd.add({"clientbtools", "cbtools"}, {"clientbtools", "gives you clientbtools"}, function()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/IlIlIllllIlIIlII/Private-Admin/main/ClientBtools"))()
+ end)
+
  cmd.add({"febtools"}, {"febtools", "Move parts that are your hats"}, function()
  -- [[ THANKS TO ROUXHAVER FOR THIS ]] --
  -- check out his github - https://github.com/rouxhaver
