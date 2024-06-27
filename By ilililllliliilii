@@ -4,7 +4,7 @@
  if (not game.IsLoaded(game)) then
 	 local Loaded = game.Loaded
 	 Loaded.Wait(Loaded);
-	 wait(2.5)
+	 wait(1.5)
  end
  
  -- Notification library
@@ -787,7 +787,7 @@
 		 
 		 });
 	 else
- writefile("Private-Admin\\Prefix.txt", PrefixChange)
+ writefile("Nameless-Admin\\Prefix.txt", PrefixChange)
  opt.prefix = PrefixChange
  Notify({
  Description = "Prefix saved to '" .. PrefixChange .. "'";
@@ -4385,7 +4385,7 @@ print(Time)
  
 		 cmd.add({"harked", "comet"}, {"harked (comet)", "Executes Comet which is like harked"}, function()
 			 Notify({
- Description = "";
+ Description = "add my Discord for any questions! Use the discord command to get my tag";
  Title = "Private Admin";
  Duration = 7;
  
@@ -5094,7 +5094,7 @@ until npcfollowloop == false
  Duration = 5;
  
  });
-	 --- made by ilililllliliilii
+	 --- made by joshclark756#7155
  local mouse = game.Players.LocalPlayer:GetMouse()
  local uis = game:GetService("UserInputService")
  mouse.Button1Down:Connect(function()
@@ -5152,7 +5152,7 @@ until npcfollowloop == false
  Duration = 5;
  
  });
-	 -- made by ilililllliliilii
+	 -- made by joshclark756#7155
  -- Variables
  local mouse = game.Players.LocalPlayer:GetMouse()
  local uis = game:GetService("UserInputService")
@@ -5920,7 +5920,6 @@ end
 			 end
 	 end)
  
-
  cmd.add({"2016"}, {"2016", "2016 CORE GUI"}, function()
 	-- [[ PLAYERBOARD IS BUGGED BUT WILL TRY TO FIX. ]] --
  loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/2016MODE"))()
@@ -7965,9 +7964,10 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 			 wait(1)
 			 loadstring(game:HttpGet(('https://pastefy.ga/zxwQDjbc/raw'),true))()
 			 --[[
-	 Custom BTools V2 | Script made by ilililllliliilii
+	 FE Custom BTools V2 | Script made by Cyclically
 	 BTools will only replicate on unanchored parts
-	 Don't edit script unless you know what you're doing. If you wanna add this into a script, please give credits and message me on discord that you added it in a script at ilililllliliilii
+	 https://v3rmillion.net/member.php?action=profile&uid=785986
+	 Don't edit script unless you know what you're doing. If you wanna add this into a script, please give credits and message me on discord that you added it in a script at Cyclically#4905
  ]]
  
  local LocalPlayer = game:GetService("Players").LocalPlayer
@@ -8153,7 +8153,7 @@ print(text)
 		 8/22/2022 - Fixed Chat gui glitching on some games such as Prison Life.
 		 9/30/2022 - Fixed chat gui glitching AGAIN... (added better checks too)
 		 10/10/2022 - Added gethui() function and fix for Synapse v3.
-		 11/11/2022 - I fixed it though.
+		 11/11/2022 - Idk what happened but it stopped working... I fixed it though.
 	 ]]--
 	 
 		 local ACL_LoadTime = tick()
@@ -8197,7 +8197,7 @@ print(text)
 					 end
 					 wait(1)
 					 if StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-						 x:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, OldSetting) -- probably defaults to false i am too lazy for the making of this lol
+						 x:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, OldSetting) -- probably defaults to false i am too tired for the making of this lol
 					 end
 					 ChatChanged = false
 				 end
@@ -10313,7 +10313,7 @@ until glueloop == false
 	glueloop = false
  end)
  
- cmd.add({"sneakattackkiss", "smooch", "kiss", "spook", "scare"}, {"smooch <player> (kiss)", "Sneak Attack A Player With A Kiss"}, function(...)
+ cmd.add({"smooch", "sneakattackkiss", "kiss", "spook", "scare"}, {"smooch <player> (kiss)", "Sneak Attack A Player With A Kiss"}, function(...)
  Username = (...)
  Target = getPlr(Username)
  
@@ -10330,9 +10330,9 @@ until glueloop == false
 		 
  end)
  
- loopsmooch = false
+ loopspook = false
  cmd.add({"loopsmooch", "loopkiss"}, {"loopsmooch <player> (loopkiss)", "Sneak Attack A Player With A Kiss and then again and again"}, function(...)
-	 loopsmooch = true
+	 loopspook = true
  repeat wait()
 	 Username = (...)
 	 Target = getPlr(Username)
@@ -10348,11 +10348,11 @@ until glueloop == false
 							 LocalPlayer.Character.HumanoidRootPart.CFrame = oldCF
 					 end
 					 wait(0.3)
- until loopsmooch == false
+ until loopspook == false
  end)
  
- cmd.add({"unloopsmooch", "unloopkiss"}, {"unloopsmooch <player> (unloopkiss)", "Stops the loopsmooch command"}, function()
-	 loopsmooch = false
+ cmd.add({"unloopspook", "unloopscare"}, {"unloopspook <player> (unloopscare)", "Stops the loopspook command"}, function()
+	 loopspook = false
  end)
  
  cmd.add({"unbang", "unfuck"}, {"unbang", "Unbangs the player"}, function()
@@ -10364,7 +10364,7 @@ until glueloop == false
  end
  end)
  
- cmd.add({"unairwalk", "unaw", "killjesus"}, {"unairwalk (unaw)", "Stops the airwalk command"}, function()
+ cmd.add({"unairwalk", "unaw"}, {"unairwalk (unaw)", "Stops the airwalk command"}, function()
 	 for i, v in pairs(workspace:GetChildren()) do
 		 if tostring(v) == "Airwalk" then
 			 v:Destroy()
@@ -10381,7 +10381,7 @@ until glueloop == false
  
  end)
  
- cmd.add({"airwalk", "aw", "jesus"}, {"airwalk (aw)", "Press space to go up, unairwalk to stop"}, function()
+ cmd.add({"airwalk", "aw"}, {"airwalk (aw)", "Press space to go up, unairwalk to stop"}, function()
  wait();
  
  Notify({
@@ -11948,7 +11948,7 @@ until glueloop == false
 					 game.CoreGui.PurchasePrompt.Enabled = true
 				 end)
 				 
-								 cmd.add({"private"}, {"private", "Makes your hats visible but not your name or your body"}, function()
+								 cmd.add({"nameless"}, {"nameless", "Makes your hats visible but not your name or your body"}, function()
  loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/FE/main/nameless"))()
  end)
  
@@ -12023,7 +12023,7 @@ until glueloop == false
  Duration = 5;
  
  });
-	  -- made by ilililllliliilii
+	  -- made by joshclark756#7155
  local mouse = game.Players.LocalPlayer:GetMouse()
  local uis = game:GetService("UserInputService")
  
@@ -12068,7 +12068,7 @@ until glueloop == false
  end
  end)
  wait(0.2)
-	 -- made by ilililllliliilii
+	 -- made by joshclark756#7155
  local mouse = game.Players.LocalPlayer:GetMouse()
  local uis = game:GetService("UserInputService")
  
@@ -13030,7 +13030,7 @@ end)
 	 Duration = 5;
 	 
  });
- --This script reveals ALL hidden messages in the default chat, Minecraft Style
+ --This script reveals ALL hidden messages in the default chat
  --chat "/spy" to toggle!
  enabled = true
  --if true will check your messages too
@@ -13537,7 +13537,7 @@ game.Players.LocalPlayer.CameraMode = "LockFirstPerson"
  end)
  
  cmd.add({"holdhat"}, {"holdhat", "Can make you hold your hats execute the command and you will have them in your inventory"}, function(...)
- --made by ilililllliliilii
+ --made by Nightmare#0930
  local lp = game.Players.LocalPlayer
  local char = lp.Character
  
@@ -14136,6 +14136,36 @@ end)
 	 _G.CustomUI = false
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/mgamingpro/HomebrewAdmin/master/Main'),true))()
 	 end)
+ 
+		 cmd.add({"iy", "i"}, {"iy {command} (i)", "Executes infinite yield scripts"}, function(...)
+			-- [[ thanks to homebrew devs for this ]] --
+			 if IYLOADED == false then
+				 local function copytable(tbl) local copy = {} for i,v in pairs(tbl) do copy[i] = v end return copy end
+				 local sandbox_env = copytable(getfenv())
+				 setmetatable(sandbox_env, {
+				 __index = function(self, i)
+					 if rawget(sandbox_env, i) then
+						 return rawget(sandbox_env, i)
+					 elseif getfenv()[i] then
+						 return getfenv()[i]
+					 end
+				 end
+				 })
+				 sandbox_env.game = nil
+				 iy, _ = game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"):gsub("local Main", "Main"):gsub("Players.LocalPlayer.Chatted","Funny = Players.LocalPlayer.Chatted"):gsub("local lastMessage","notify = _G.notify\nlocal lastMessage")
+				 setfenv(loadstring(iy),sandbox_env)()
+				 iy_cmds_table = sandbox_env.CMDs
+				 iy_gui = sandbox_env.Main
+				 iy_chathandler = sandbox_env.Funny
+				 execCmd = sandbox_env.execCmd
+				 iy_gui:Destroy()
+				 pcall(function()
+					 iy_chathandler:Disconnect()
+				 end)
+				 IYLOADED = true
+			 end
+			 execCmd((...))
+			 end)
  
      cmd.add({"infiniteyield", "iy"}, {"infiniteyield {command} (iy)", "Executes infinite yield admin"}, function()
 	 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
@@ -15056,14 +15086,14 @@ end
  ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
  ScreenGui.ResetOnSpawn = true
  
- TextClickButton.Name = "PrivateAdminButton"
+ TextClickButton.Name = "NamelessAdminButton"
  TextClickButton.Parent = ScreenGui
  TextClickButton.BackgroundColor3 = Color3.fromRGB(4, 4, 4)
  TextClickButton.BackgroundTransparency = 1.000
  TextClickButton.Position = UDim2.new(0.418, 0,0, 0)
  TextClickButton.Size = UDim2.new(0, 2, 0, 33)
  TextClickButton.Font = Enum.Font.SourceSansBold
- TextClickButton.Text = "Private Admin " .. currentversion .. ""
+ TextClickButton.Text = "Nameless Admin " .. currentversion .. ""
  TextClickButton.TextColor3 = Color3.fromRGB(255, 255, 255)
  TextClickButton.TextSize = 20.000
  TextClickButton.TextWrapped = true
