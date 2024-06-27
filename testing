@@ -4307,43 +4307,6 @@ task.spawn(function()
 	end
 end)
 
- cmd.add({"autohit", "automatichit"}, {"clientbring <player> (cbring)", "Brings the player on your client"}, function(...)
-	 Username = (...)
- 
-	 if connections["noclip"] then lib.disconnect("noclip") return end
-	 lib.connect("noclip", RunService.Stepped:Connect(function()
-		 if not character then return end
-		 for i, v in pairs(character:GetDescendants()) do
-			 if v:IsA("BasePart") then
-				 v.CanCollide = false
-			 end
-		 end
-	 end))
-	 
-	 if Username == "all" or Username == "others" then
-		 bringc = game:GetService("RunService").RenderStepped:Connect(function()
-			 for i, target in pairs(game:GetService("Players"):GetChildren()) do
-			 if target.Name == game.Players.LocalPlayer.Name then
-			 else
-			 target.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 5
-			 end
-			 end
-			 end)
-	 else
-	 target = getPlr(Username)
-	 
-		 bringc = game:GetService("RunService").RenderStepped:Connect(function()
-					 if target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
-	 target.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 3
-					 end
-	 end)
-	 end
- end)
- 
- cmd.add({"disableautomatichit", "disableautohit"}, {"unclientbring (uncbring)", "Disable Client bring command"}, function()
-	 bringc:Disconnect()
-	 if connections["noclip"] then lib.disconnect("noclip") return end
- end)
 
 function autoComplete(str,curText)
 	local endingChar = {"[", "/", "(", " "}
