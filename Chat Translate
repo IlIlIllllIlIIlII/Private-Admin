@@ -198,7 +198,7 @@ local executeURL = "https://translate.google.com/_/TranslateWebserverUi/data/bat
 local fsid, bl
 
 do -- init
-    print('initialize')
+	print('initialize')
     local InitialReq = got(rootURL)
     fsid = InitialReq.Body:match('"FdrFJe":"(.-)"')
     bl = InitialReq.Body:match('"cfb2h":"(.-)"')
@@ -234,7 +234,7 @@ function translate(str, to, from)
     local body = stringifyQuery{['f.req'] = jsonE(freq)}
     
     local req = got(url, "POST", body)
-    
+	
     local body = jsonD(req.Body:match'%[.-%]\n')
     local translationData = jsonD(body[1][3])
     local result = {
