@@ -8857,17 +8857,37 @@ addcmd("togglevnoclip", {}, function(args, speaker)
 end)
 
 addcmd('clientbring',{'cbring'},function(args, speaker)
-	local players = getPlayer(args[1], speaker)
-	for i,v in pairs(players)do
-		if Players[v].Character ~= nil then
-			if Players[v].Character:FindFirstChildOfClass('Humanoid') then
-				Players[v].Character:FindFirstChildOfClass('Humanoid').Sit = false
-			end
-			wait()
-			getRoot(Players[v].Character).CFrame = getRoot(speaker.Character).CFrame + Vector3.new(3,1,0)
-		end
-	end
-end)
+	 Username = (...)
+ 
+	 if connections["noclip"] then lib.disconnect("noclip") return end
+	 lib.connect("noclip", RunService.Stepped:Connect(function()
+		 if not character then return end
+		 for i, v in pairs(character:GetDescendants()) do
+			 if v:IsA("BasePart") then
+				 v.CanCollide = false
+			 end
+		 end
+	 end))
+	 
+	 if Username == "all" or Username == "others" then
+		 bringc = game:GetService("RunService").RenderStepped:Connect(function()
+			 for i, target in pairs(game:GetService("Players"):GetChildren()) do
+			 if target.Name == game.Players.LocalPlayer.Name then
+			 else
+			 target.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 5
+			 end
+			 end
+			 end)
+	 else
+	 target = getPlr(Username)
+	 
+		 bringc = game:GetService("RunService").RenderStepped:Connect(function()
+					 if target.Character and target.Character:FindFirstChild("HumanoidRootPart") then
+	 target.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 3
+					 end
+	 end)
+	 end
+ end)
 
 local bringT = {}
 addcmd('loopbring',{},function(args, speaker)
