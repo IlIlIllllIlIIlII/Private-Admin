@@ -9665,11 +9665,11 @@ getChar().HumanoidRootPart.CFrame = target.Character.Humanoid.RootPart.CFrame
  loadstring(game:HttpGet('https://github.com/DigitalityScripts/roblox-scripts/raw/main/hat%20resize'))()
  end)
  
- cmd.add({"discord"}, {"discord", "discord server link"}, function()
+ cmd.add({"discord"}, {"discord", "Copy to clipboard"}, function()
 	 wait();
 	 
 	 Notify({
-	 Description = "ilililllliliilii";
+	 Description = "Copied to clipboard";
 	 Title = "Private Admin";
 	 Duration = 15;
 	 
