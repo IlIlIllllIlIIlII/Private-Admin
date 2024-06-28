@@ -14139,8 +14139,8 @@ end)
  
  
      cmd.add({"infiniteyield", "iy"}, {"infiniteyield {command} (iy)", "Executes infinite yield admin"}, function()
-	 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-     end)
+		 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))();
+	 end)
 
 	 cmd.add({"fatesadmin"}, {"fatesadmin", "Executes fates admin"}, function()
 		 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
