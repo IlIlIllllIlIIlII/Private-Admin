@@ -4,7 +4,7 @@
  if (not game.IsLoaded(game)) then
 	 local Loaded = game.Loaded
 	 Loaded.Wait(Loaded);
-	 wait(1.5)
+	 wait(2.5)
  end
  
  -- Notification library
